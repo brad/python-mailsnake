@@ -12,7 +12,7 @@ packages = [
 setup(
     name='mailsnake',
     version=__version__,
-    install_requires=['requests==1.2.3'],
+    install_requires=['requests==2.2.1'],
     author=__author__,
     license=open('LICENSE').read(),
     url='https://github.com/michaelhelmick/python-mailsnake',
