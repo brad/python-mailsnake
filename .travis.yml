@@ -26,8 +26,3 @@ env:
       4CrSvdCV05vcDm5BRUZ2OqA2/t//DPpOxdO4emxTXMfeOz2KDTs=
 install: pip install -r requirements.txt
 script: nosetests -v -w tests/ --logging-filter="mailsnake" --with-cov --cov mailsnake --cov-config .coveragerc --cov-report term-missing
-notifications:
-  email: false
-branches:
-  only:
-    - master
