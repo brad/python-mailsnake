@@ -24,5 +24,9 @@ env:
       KSME137xMK3VLxEpBbKoEpdUUUFlwnQglRM7hoxLgGjksQh5V++HclpvAXoq
       hQ9arqmgt62Tv8W5m2vpHxoH7az6ErSP2JqykNynkoNfr8elFithBb93i9PP
       4CrSvdCV05vcDm5BRUZ2OqA2/t//DPpOxdO4emxTXMfeOz2KDTs=
-install: pip install -r requirements.txt
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
 script: nosetests -v -w tests/ --logging-filter="mailsnake" --with-cov --cov mailsnake --cov-config .coveragerc --cov-report term-missing
+after_success:
+  - coveralls
